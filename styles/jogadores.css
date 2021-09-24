@@ -15,6 +15,12 @@
 .card h1{
     margin-bottom: 0;
     padding-bottom: 0;
+    font-size: 2rem;
+
+}
+
+.card p{
+    font-size: 1.3rem;
 }
 
 .complete-name{

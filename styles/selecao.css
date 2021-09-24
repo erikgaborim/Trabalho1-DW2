@@ -18,10 +18,13 @@ section{
 }
 
 .card{
-    box-shadow: 0 4px 8px 0 rebeccapurple;
+    box-shadow: 1px 4px 8px 1px rebeccapurple;
     /* padding: 2rem 3.6rem; */
     margin: 3rem;
     width:20rem;
+    text-decoration: none;
+    /* background-color: rgb(48, 46, 46); */
+    /* color: aliceblue; */
 
 }
 
@@ -30,6 +33,11 @@ section{
     width: 100%;
    
 }
+
+.card .content .text{
+    padding: 0 2rem; 
+}
+
 .card .content h2{
     text-align: center;
     margin: 0;
@@ -42,11 +50,16 @@ section{
 }
 
 
+.button {
+    text-align: center;
+}
+
+
 .atributo{
     display:flex;
    /* align-items: center; */
     margin-right: auto;         
-    color: red;       
+    /* color: red;        */
 }
 .valor{
     display: flex;
@@ -55,6 +68,16 @@ section{
 
 .card  .content {
     padding: 10px;
+}
+
+.card h2{
+    font-size: 2rem;
+}
+
+
+
+.card p{
+    font-size: 1.3rem;
 }
 
 .butao{
