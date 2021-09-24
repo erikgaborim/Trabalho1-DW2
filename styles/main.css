@@ -10,3 +10,42 @@ html, body{
     padding: 0;
     margin: 0;
 }
+
+header li{
+    list-style: none;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#qatar-name{
+    font: 400 40px Roboto Slab;
+    padding: 0;
+}
+
+#div-header-options{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+#div-header-options h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--buttom-header-font-color);
+    margin: 0 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+#div-header-options img{
+    margin: 0 1rem;
+    min-width: 75px;
+    min-height: 75px;
+}
