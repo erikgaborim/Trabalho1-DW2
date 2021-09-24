@@ -11,15 +11,15 @@ section{
 
 .card{
     box-shadow: 0 4px 8px 0 rebeccapurple;
-    padding: 2rem 3.6rem;
+    /* padding: 2rem 3.6rem; */
     margin: 5rem;
 
 }
 
 .card img{
 
-    max-width: 100;
-
+    width: 100%;
+   
 }
 .card .content h2{
     text-align: center;
