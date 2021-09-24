@@ -8,8 +8,18 @@
     box-shadow: 0 4px 8px 0 rebeccapurple;
 }
 
-#complete-name, .card h1, .card a{
+.complete-name, .card h1, .card a{
     text-align: center;
+}
+
+.card h1{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.complete-name{
+    margin-top: 0.2rem;
+    font-size: 14px;
 }
 
 .card img{
