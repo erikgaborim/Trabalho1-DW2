@@ -1,12 +1,26 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+
 section{
-    margin: 10rem;
+    /* margin: 10rem; */
+    margin: 0;
     display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    /* max-width: 90%; */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    /* max-width: 80%; */
 }
 
 .card{
     box-shadow: 0 4px 8px 0 rebeccapurple;
     /* padding: 2rem 3.6rem; */
-    margin: 5rem;
+    margin: 3rem;
 
 }
 
@@ -17,6 +31,7 @@ section{
 }
 .card .content h2{
     text-align: center;
+    margin: 0;
 }
 
 .card .text{
@@ -24,6 +39,7 @@ section{
     column-gap: 10px;
 /*    margin: 1rem;*/
 }
+
 
 .atributo{
     display:flex;
