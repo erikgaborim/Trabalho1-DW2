@@ -1,0 +1,12 @@
+:root{
+    font-family: Roboto;
+    --buttom-color: #0D0D0D;
+    --button-color-hover: #1d1d1d;
+    --buttom-header-font-color: #A66D88;
+    --index-main-color: #731943;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}

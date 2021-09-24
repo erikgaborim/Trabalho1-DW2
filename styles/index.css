@@ -1,0 +1,103 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+li{
+    list-style: none;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#qatar-name{
+    font: 400 40px Roboto Slab;
+    padding: 0;
+}
+
+#div-header-options{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+#div-header-options h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--buttom-header-font-color);
+    margin: 0 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+#div-header-options img{
+    margin: 0 1rem;
+    min-width: 75px;
+    min-height: 75px;
+}
+
+main{
+    display: flex;
+}
+
+#content-page{
+    text-align: justify;
+    margin: 10rem 0 0 3rem;
+}
+
+#content-page h1{
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+#content-page h3{
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+.buttons-main{
+    background-color: var(--buttom-color);
+    color: white;
+    font-size: 24px;
+    height: 4rem;
+    width: 9rem;
+    border-radius: 1.6rem;
+    border-style: none;
+    margin: 0 1rem 0 0;
+}
+
+.buttons-main:hover{
+    cursor: pointer;
+    background-color: var(--button-color-hover);
+    transition: 0.8s;
+}
+
+#div-image{
+    position: absolute;
+    right: 12rem;
+    top: 8rem;
+}
+
+#player-image{
+    min-width: 25rem;
+    min-height: 25rem;
+}
+
+#linear-gradient{
+    position: absolute;
+    height: 50vh;
+    width: 100vw;
+    background: linear-gradient(to top left, var(--index-main-color) 50%, white 50%);
+    bottom: 0;
+    z-index: -1;
+}

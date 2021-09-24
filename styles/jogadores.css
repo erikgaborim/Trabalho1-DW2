@@ -1,0 +1,33 @@
+.section-cards{
+    display: flex;
+}
+
+.card{
+    margin: 0 2rem;
+    padding: 0 2rem;
+    box-shadow: 0 4px 8px 0 rebeccapurple;
+}
+
+.card h1, .card a{
+    text-align: center;
+}
+
+.text{
+    display: flex;
+    column-gap: 10px;
+}
+
+.atributo{
+    display:flex;
+    margin-right: auto;         
+    color: red;       
+}
+
+.valor{
+    display: flex;
+    margin-left: auto;
+}
+
+.div-buttons{
+    text-align: center;
+}
