@@ -3,7 +3,7 @@
 }
 
 .card{
-    margin: 0 2rem;
+    margin: 4rem 4rem;
     width: 20rem;
     box-shadow: 0 4px 8px 0 rebeccapurple;
 }
@@ -13,8 +13,8 @@
 }
 
 .card img{
-    /* min-width: 25rem;
-    min-height: 10rem; */
+    width: 100%;
+    max-height: 15rem;
 }
 
 .card-text-area{
