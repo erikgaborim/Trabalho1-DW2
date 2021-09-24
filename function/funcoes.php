@@ -2,7 +2,7 @@
   function getConnection() {
     try {
       $opcoes = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-      $conexao = new PDO('pgsql:host=localhost;dbname=CopaDoMundo', "postgres", "postgres", $opcoes);
+      $conexao = new PDO('pgsql:host=localhost;dbname=CUP', "postgres", "1234", $opcoes);
         return $conexao;
     } catch (PDOException $e) {
       return null;
