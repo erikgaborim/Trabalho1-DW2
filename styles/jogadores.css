@@ -4,12 +4,21 @@
 
 .card{
     margin: 0 2rem;
-    padding: 0 2rem;
+    width: 20rem;
     box-shadow: 0 4px 8px 0 rebeccapurple;
 }
 
-.card h1, .card a{
+#complete-name, .card h1, .card a{
     text-align: center;
+}
+
+.card img{
+    /* min-width: 25rem;
+    min-height: 10rem; */
+}
+
+.card-text-area{
+    padding: 0 2rem;
 }
 
 .text{
