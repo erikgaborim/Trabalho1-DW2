@@ -3,7 +3,7 @@
 }
 
 .card{
-    margin: 4rem 4rem;
+    margin: 3rem;
     width: 20rem;
     box-shadow: 0 4px 8px 0 rebeccapurple;
 }
@@ -24,7 +24,8 @@
 
 .card img{
     width: 100%;
-    max-height: 15rem;
+    max-height: 10rem;
+    object-fit: cover;
 }
 
 .card-text-area{
