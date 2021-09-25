@@ -50,6 +50,48 @@ a{
     min-height: 75px;
 }
 
+.div-buttons{
+    text-align: center;
+}
+
+.crud-buttons{
+    margin: 2rem 0.5rem;
+    height: 2.5rem;
+    width: 6rem;
+    border-radius: 1.2rem;
+    border-style: none;
+    font-family: Roboto;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.crud-buttons:hover{
+    width: 8rem;
+    height: 3rem;
+    font-size: 18px;
+}
+
+.update-button{
+    background-color: yellow;
+}
+
+.delete-button{
+    background-color: red;
+    color: white;
+}
+
+.create-button{
+    background-color: green;
+    width: 10rem;
+    margin: 0.4rem 0;
+}
+
+.create-button:hover{
+    width: 12rem;
+    height: 3rem;
+}
+
 section{
     /* margin: 10rem; */
     margin: 0;
