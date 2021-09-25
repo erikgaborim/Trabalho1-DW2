@@ -24,9 +24,9 @@
                 <li><h1 id="qatar-name">QATAR</h1></li>
             </div>
             <div id="div-header-options">
-                <li><a href="../index.html"><h3>Home</h3></a></li>
-                <li><a href="./jogadores.html"><h3>Jogadores</h3></a></li>
-                <li><a href="../views/selecao.html"><h3>Seleções</h3></a></li>
+                <li><a href="../index.php"><h3>Home</h3></a></li>
+                <li><a href="./jogadores.php"><h3>Jogadores</h3></a></li>
+                <li><a href="../views/selecao.php"><h3>Seleções</h3></a></li>
                 <li><img src="../images/logo-copa.svg" alt="simbolo_copa_catar"></li>
             </div>
         </ul>
@@ -140,12 +140,12 @@
                     <a href="#"><button class="crud-buttons delete-button">Excluir</button></a>
                 </div>
             </div>
-            <a href="#"><button class="crud-buttons create-button">Criar</button></a>
+            <a href="./frmjogador.php"><button class="crud-buttons create-button">Criar</button></a>
         </section>
     </main>
 
     <footer>
-        &copy; Daniel dos Santos, Erik Gaborim e Maike Mendes - 2021
+        &copy; <a href="http://https://github.com/dsgsantos1">Daniel dos Santos</a>, <a href="http://https://github.com/erikgaborim">Erik Gaborim</a> e <a href="http://https://github.com/maikolaMS">Maike Mendes</a> - 2021
     </footer>
 </body>
 </html>

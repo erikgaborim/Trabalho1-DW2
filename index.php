@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,9 +26,9 @@
                 <li><h1 id="qatar-name">QATAR</h1></li>
             </div>
             <div id="div-header-options">
-                <li><a href="./index.html"><h3>Home</h3></a></li>
-                <li><a href="./views/jogadores.html"><h3>Jogadores</h3></a></li>
-                <li><a href="./views/selecao.html"><h3>Seleções</h3></a></li>
+                <li><a href="./index.php"><h3>Home</h3></a></li>
+                <li><a href="./views/jogadores.php"><h3>Jogadores</h3></a></li>
+                <li><a href="./views/selecao.php"><h3>Seleções</h3></a></li>
                 <li><img src="./images/logo-copa.svg" alt="simbolo_copa_catar"></li>
             </div>
         </ul>
@@ -40,8 +40,8 @@
                 <h3>SEUS JOGADORES E SELEÇÕES</h3>
             </div>
             <div id="div-buttons">
-                <a href="./views/jogadores.html"><button class="buttons-main">Jogadores</button></a>
-                <a href="./views/selecao.html"><button class="buttons-main">Seleções</button></a>
+                <a href="./views/jogadores.php"><button class="buttons-main">Jogadores</button></a>
+                <a href="./views/selecao.php"><button class="buttons-main">Seleções</button></a>
             </div>
         </nav>
         <nav id="div-image">

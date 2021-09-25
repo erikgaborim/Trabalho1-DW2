@@ -104,7 +104,9 @@ section{
     justify-content:center;
     /* max-width: 80%; */
 }
-
+a{
+    color: var(--buttom-header-font-color);
+}
 footer{
     color: var(--buttom-header-font-color);
     text-align: center;

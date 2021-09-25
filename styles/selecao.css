@@ -29,9 +29,9 @@ section{
 }
 
 .card img{
-
     width: 100%;
-   
+    max-height: 10rem;
+    object-fit: cover;
 }
 
 .card .content .text{
