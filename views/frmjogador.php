@@ -46,6 +46,7 @@
             <input type="number" name="id_clube" placeholder="Id do Clube" required>
             <input type="number" name="id_selecao" placeholder="Id da Seleção" required>
             <input type="submit" name="acao" value="Enviar">
+            <p>Teste</p>
         </form>
     </main>
 
