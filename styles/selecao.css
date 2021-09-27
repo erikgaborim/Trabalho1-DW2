@@ -88,3 +88,14 @@ section{
 body{
     background-color: fffff;
 }
+
+.area{
+    display: flex;
+    width: 100%;
+    /* align-items: center; */
+    justify-content:center;
+}
+
+.rodape{
+    background-color:red;
+}

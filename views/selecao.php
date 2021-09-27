@@ -185,8 +185,9 @@
              
         </section>
 
-        <a href="./frmselecao.php"><button class="crud-buttons create-button">Criar</button></a>
-
+        <div class="area">
+            <a href="./frmselecao.php"><button class="crud-buttons create-button">Criar</button></a>
+        </div>
     </main>
 
     <footer>

@@ -16,7 +16,7 @@
     <!--CSS's-->
     <link rel="stylesheet" href="../styles/frm.css">
     <link rel="stylesheet" href="../styles/main.css">
-
+    <link rel="stylesheet" href="../styles/frmJogador.css">
 </head>
 <body>
     
@@ -34,8 +34,22 @@
         </ul>
     </header>
 
+    <main> 
+        <form action="php/insert.php" method="post">
+            <h3>Inserir Jogador</h3>
+            <input type="text" name="nome" placeholder="Nome Completo" required>
+            <input type="text" name="apelido" placeholder="Apelido" required>
+            <input type="number" name="altura" step="any" placeholder="Altura (Ex: 1.75)" required>
+            <input type="number" name="peso" step="any" placeholder="Peso (Ex: 89.0)" required>
+            <input type="text" name="posicao"  placeholder="Posição (Ex: ATA)" required>
+            <input type="date" name="data"  placeholder="Data de Nascimento" required>
+            <input type="number" name="id_clube" placeholder="Id do Clube" required>
+            <input type="number" name="id_selecao" placeholder="Id da Seleção" required>
+            <input type="submit" name="acao" value="Enviar">
+        </form>
+    </main>
 
-    <footer>
+    <footer class="rodape">
         &copy; <a href="http://https://github.com/dsgsantos1">Daniel dos Santos</a>, <a href="http://https://github.com/erikgaborim">Erik Gaborim</a> e <a href="http://https://github.com/maikolaMS">Maike Mendes</a> - 2021
     </footer>
     

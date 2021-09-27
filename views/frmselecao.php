@@ -16,7 +16,7 @@
     <!--CSS's-->
     <link rel="stylesheet" href="../styles/frm.css">
     <link rel="stylesheet" href="../styles/main.css">
-
+    <link rel="stylesheet" href="../styles/frmSelecao.css">
 </head>
 <body>
     
@@ -34,9 +34,22 @@
         </ul>
     </header>
 
-    
-    <footer>
+    <main> 
+        <form action="php/insert.php" method="post">
+            <h3>Inserir Seleção</h3>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="number" name="copas"  placeholder="Quantidade de Copas" required>
+            <input type="number" name="participacao" placeholder="Participação em Copas" required>
+            <input type="number" name="rank"  placeholder="Posição no Ranking FIFA" required>
+            <input type="number" name="id_tecnico" placeholder="Id do Tecnico" required>
+          
+            <input type="submit" name="acao" value="Enviar">
+        </form>
+    </main>
+
+    <footer class="rodape">
         &copy; <a href="http://https://github.com/dsgsantos1">Daniel dos Santos</a>, <a href="http://https://github.com/erikgaborim">Erik Gaborim</a> e <a href="http://https://github.com/maikolaMS">Maike Mendes</a> - 2021
     </footer>
+    
 </body>
 </html>
