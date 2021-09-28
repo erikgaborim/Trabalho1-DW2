@@ -62,14 +62,38 @@
     <main> 
         <form action="../function/gravarJogador.php" method="post">
             <h3>Inserir Jogador</h3>
-            <input type="text" name="nome" placeholder="Nome Completo" required>
-            <input type="text" name="apelido" placeholder="Apelido" required>
-            <input type="number" name="altura" step="any" placeholder="Altura (Ex: 1.75)" required>
-            <input type="number" name="peso" step="any" placeholder="Peso (Ex: 89.0)" required>
-            <input type="text" name="posicao"  placeholder="Posição (Ex: ATA)" required>
-            <input type="date" name="data"  placeholder="Data de Nascimento" required>
-            <input type="number" name="id_clube" placeholder="Id do Clube" required>
-            <input type="number" name="id_selecao" placeholder="Id da Seleção" required>
+            <input type="text" name="nome" placeholder="Nome Completo" value = '<?php echo "{$jogador['nome']}"
+            ?>'required>
+            <input type="text" name="apelido" placeholder="Apelido" value = '<?php echo "{$jogador['apelido']}"
+            ?>'required>
+            <input type="number" name="altura" step="any" placeholder="Altura (Ex: 1.75)" value = '<?php echo "{$jogador['altura']}"
+            ?>'required>
+            <input type="number" name="peso" step="any" placeholder="Peso (Ex: 89.0)" value = '<?php echo "{$jogador['peso']}"
+            ?>' required>
+            <input type="text" name="posicao"  placeholder="Posição (Ex: ATA)" value = '<?php echo "{$jogador['posicao']}"
+            ?>' required>
+            <input type="date" name="data"  placeholder="Data de Nascimento" value = '<?php echo "{$jogador['data_nascimento']}"
+            ?>' required>
+            <select class="form-select" name="id_clube">
+            <?php
+            foreach ($clubes as $clube) {
+              $selected =
+                $clube['id'] == $jogador['id_clube'] ?
+                'selected': '';
+              echo "<option $selected value='{$clube['id']}'>{$clube['nome']}</option>";
+            }
+           ?>
+            </select>
+            <select class="form-select" name="id_selecao">
+            <?php
+            foreach ($selecoes as $selecao) {
+              $selected =
+                $selecao['id'] == $jogador['id_selecao'] ?
+                'selected': '';
+              echo "<option $selected value='{$selecao['id']}'>{$selecao['nome']}</option>";
+            }
+            ?>
+        </select> 
             <input type="submit" name="acao" value="Enviar">
             <!-- <p>Teste</p> -->
         </form>

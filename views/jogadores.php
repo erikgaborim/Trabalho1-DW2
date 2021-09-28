@@ -50,6 +50,8 @@
                     
                     $data_nascimento = new \DateTime($jogador['data_nascimento']);
                     $dateNow = new \DateTime(date('Y-m-d'));
+                    $dateDiff = $data_nascimento->diff($dateNow);
+
 
                     foreach ($clubes as $clube){
                         if($clube['id'] == $jogador['id_clube']){
@@ -86,13 +88,19 @@
     
                         <div class='text'>
                             <p class='atributo'>Altura: </p>
-                            <p class='valor'>{$jogador['altura']}</p>
+                            <p class='valor'>{$jogador['altura']}m</p>
                         </div>
     
                         <div class='text'>
                             <p class='atributo'>Peso: </p>
-                            <p class='valor'>{$jogador['peso']}</p>
+                            <p class='valor'>{$jogador['peso']} Kg</p>
                         </div>
+
+                        <div class='text'>
+                            <p class='atributo'>Idade: </p>
+                            <p class='valor'> $dateDiff->y anos</p>
+                        </div>
+
                     </div>
                     <div class='div-buttons'>
                         <a href='#'><button class='crud-buttons update-button'>Alterar</button></a>
