@@ -28,7 +28,7 @@
     $sentenca->bindParam(":posicao", $jogador['posicao']);
     $sentenca->bindParam(":id_clube", $jogador['id_clube']);
     $sentenca->bindParam(":id_selecao", $jogador['id_selecao']);
-    $sentenca->bindParam(":data_nascimento", $jogador['data_nascimento']);
+    $sentenca->bindParam(":data_nascimento", $jogador['data']);
     $sentenca->execute();
   }
 

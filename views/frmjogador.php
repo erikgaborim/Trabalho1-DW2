@@ -1,3 +1,28 @@
+<?php
+  error_reporting(E_ALL);
+  ini_set("display_errors", 1);
+  require_once "../function/funcoes.php";
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  if (!isset($jogador)) {
+    $jogador = array();
+    $jogador['id'] = 0;
+    $jogador['nome'] = "";
+    $jogador['apelido'] = "";
+    $jogador['altura'] = "";
+    $jogador['peso'] = "";
+    $jogador['posicao'] = "";
+    $jogador['id_clube']= "";
+    $jogador['id_selecao']= "";
+    $jogador['data_nascimento'] = "";
+  }
+
+  $jogadores = getAll_J();
+  $selecoes = getAll_S();
+  $clubes = getAll_C();
+
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,7 +60,7 @@
     </header>
 
     <main> 
-        <form action="php/insert.php" method="post">
+        <form action="../function/gravarJogador.php" method="post">
             <h3>Inserir Jogador</h3>
             <input type="text" name="nome" placeholder="Nome Completo" required>
             <input type="text" name="apelido" placeholder="Apelido" required>
@@ -46,7 +71,7 @@
             <input type="number" name="id_clube" placeholder="Id do Clube" required>
             <input type="number" name="id_selecao" placeholder="Id da Seleção" required>
             <input type="submit" name="acao" value="Enviar">
-            <p>Teste</p>
+            <!-- <p>Teste</p> -->
         </form>
     </main>
 

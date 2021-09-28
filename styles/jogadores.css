@@ -66,3 +66,9 @@ section{
     justify-content:center;
     /* max-width: 80%; */
 }
+
+.div{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}

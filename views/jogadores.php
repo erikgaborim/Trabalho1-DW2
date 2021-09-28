@@ -1,3 +1,14 @@
+<?php
+	require_once "../function/funcoes.php";
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  
+  $jogadores = getAll_J();
+  $clubes = getAll_C();
+  $selecoes = getAll_S();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +44,71 @@
     </header>
     <main>
         <section class="section-cards">
-            <div class="card">
+            
+            <?php
+                foreach ($jogadores as $jogador){
+                    
+                    $data_nascimento = new \DateTime($jogador['data_nascimento']);
+                    $dateNow = new \DateTime(date('Y-m-d'));
+
+                    foreach ($clubes as $clube){
+                        if($clube['id'] == $jogador['id_clube']){
+                          $clube_nome = $clube['nome']; 
+                        }
+                    }
+
+                    foreach ($selecoes as $selecao){
+                        if($selecao['id'] == $jogador['id_selecao']){
+                          $selecao_nome = $selecao['nome']; 
+                        }
+                    }
+
+                    echo "
+                    <div class='card'>
+                    <img src='../images/vinimalvadeza.jpeg' alt='vini'>
+                    <div class='card-text-area'>
+                        <h1>{$jogador['nome']}</h1>
+                        <p class='complete-name'>{$jogador['apelido']}</p>
+                        <div class='text'>
+                            <p class='atributo'>Posição: </p>
+                            <p class='valor'>{$jogador['posicao']}</p>
+                        </div>
+                        
+                        <div class='text'>
+                            <p class='atributo'>Seleção:</p>
+                            <p class='valor'>$selecao_nome</p>
+                        </div>
+    
+                        <div class='text'>
+                            <p class='atributo'>Clube:</p>
+                            <p class='valor'>$clube_nome</p>
+                        </div>
+    
+                        <div class='text'>
+                            <p class='atributo'>Altura: </p>
+                            <p class='valor'>{$jogador['altura']}</p>
+                        </div>
+    
+                        <div class='text'>
+                            <p class='atributo'>Peso: </p>
+                            <p class='valor'>{$jogador['peso']}</p>
+                        </div>
+                    </div>
+                    <div class='div-buttons'>
+                        <a href='#'><button class='crud-buttons update-button'>Alterar</button></a>
+                        <a href='#'><button class='crud-buttons delete-button'>Excluir</button></a>
+                    </div>
+                </div>
+                    ";
+                
+                }
+            ?>
+
+            
+
+            
+
+            <!-- <div class="card">
                 <img src="../images/vinimalvadeza.jpeg" alt="vini">
                 <div class="card-text-area">
                     <h1>Nome</h1>
@@ -67,81 +142,13 @@
                     <a href="#"><button class="crud-buttons update-button">Alterar</button></a>
                     <a href="#"><button class="crud-buttons delete-button">Excluir</button></a>
                 </div>
-            </div>
-
-            <div class="card">
-                <img src="../images/vinimalvadeza.jpeg" alt="vini">
-                <div class="card-text-area">
-                    <h1>Nome</h1>
-                    <p class="complete-name">Nome completo do player</p>
-                    <div class="text">
-                        <p class="atributo">Posição: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-                    
-                    <div class="text">
-                        <p class="atributo">Seleção: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-
-                    <div class="text">
-                        <p class="atributo">Clube: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-
-                    <div class="text">
-                        <p class="atributo">Altura: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-
-                    <div class="text">
-                        <p class="atributo">Peso: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-                </div>
-                <div class="div-buttons">
-                    <a href="#"><button class="crud-buttons update-button">Alterar</button></a>
-                    <a href="#"><button class="crud-buttons delete-button">Excluir</button></a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="../images/vinimalvadeza.jpeg" alt="vini">
-                <div class="card-text-area">
-                    <h1>Nome</h1>
-                    <p class="complete-name">Nome completo do player</p>
-                    <div class="text">
-                        <p class="atributo">Posição: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-                    
-                    <div class="text">
-                        <p class="atributo">Seleção: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-
-                    <div class="text">
-                        <p class="atributo">Clube: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-
-                    <div class="text">
-                        <p class="atributo">Altura: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-
-                    <div class="text">
-                        <p class="atributo">Peso: </p>
-                        <p class="valor">Valor</p>
-                    </div>
-                </div>
-                <div class="div-buttons">
-                    <a href="#"><button class="crud-buttons update-button">Alterar</button></a>
-                    <a href="#"><button class="crud-buttons delete-button">Excluir</button></a>
-                </div>
-            </div>
-            <a href="./frmjogador.php"><button class="crud-buttons create-button">Criar</button></a>
+            </div> -->
+            
         </section>
+        <div class="div">
+
+        <a href="./frmjogador.php"><button class="crud-buttons create-button">Criar</button></a>
+        </div>
     </main>
 
     <footer>
