@@ -1,3 +1,13 @@
+<?php
+	require_once "../function/funcoes.php";
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);  
+  error_reporting(E_ALL);
+
+  $selecoes = getAll_S();
+  $tecnicos = getAll_T();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,44 +45,54 @@
     <main>
          <section>
 
-             <div class = "card">
+            <?php 
 
-                <img class = "selecao" src = "../images/selecao-icon.jpeg">
+                foreach ($selecoes as $selecao){
+                    foreach ($tecnicos as $tecnico){
+                        if($tecnico['id'] == $selecao['id_tecnico']){
+                          $tecnico_nome = $tecnico['nome']; 
+                        }
+                      }
+                    echo" 
+                        <div class = 'card'>
 
-                <div class="content">
+                            <img class = 'selecao' src = '../images/selecao-icon.jpeg'>
 
-                    <h2>Brasil</h2>
-                
-                    <div class="text">
-                        <p class="atributo">Tecnico</p> 
-                        <p class="valor">Tite</p>
-                    </div>
+                            <div class='content'>
 
-                    <div class="text">
-                        <p class="atributo">Copas do Mundo</p> 
-                        <p class="valor">6</p>
-                    </div>
+                                <h2>{$selecao['nome']}</h2>
+                            
+                                <div class='text'>
+                                    <p class='atributo'>Tecnico</p> 
+                                    <p class='valor'>{$tecnico_nome}</p>
+                                </div>
 
-                    <div class="text">
-                        <p class="atributo">Participação em copas</p> 
-                        <p class="valor">19</p>
-                    </div>
+                                <div class='text'>
+                                    <p class='atributo'>Copas do Mundo</p> 
+                                    <p class='valor'>{$selecao['titulos']}</p>
+                                </div>
 
-                    <div class="text">
-                        <p class="atributo">Racking</p> 
-                        <p class="valor">9</p>
-                    </div>
+                                <div class='text'>
+                                    <p class='atributo'>Participação em copas</p> 
+                                    <p class='valor'>{$selecao['participacao']}</p>
+                                </div>
 
-                    <div class="div-buttons">
-                        <a href="#"><button class="crud-buttons update-button">Alterar</button></a>
-                        <a href="#"><button class="crud-buttons delete-button">Excluir</button></a>
-                    </div>
+                                <div class='text'>
+                                    <p class='atributo'>Racking FIFA</p> 
+                                    <p class='valor'>{$selecao['posicao']}º</p>
+                                </div>
 
-                </div>
+                                <div class='div-buttons'>
+                                    <a href='#'><button class='crud-buttons update-button'>Alterar</button></a>
+                                    <a href='#'><button class='crud-buttons delete-button'>Excluir</button></a>
+                                </div>
 
-             </div>
+                            </div>
 
-             <div class = "card">
+                        </div>";
+                }
+            ?>
+             <!-- <div class = "card">
 
                 <img class = "selecao" src = "../images/selecao-icon.jpeg">
 
@@ -181,7 +201,7 @@
 
                 </div>
 
-             </div>
+             </div> -->
              
         </section>
 

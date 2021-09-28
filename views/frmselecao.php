@@ -1,3 +1,22 @@
+<?php
+  require_once "../function/funcoes.php";
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  if (!isset($selecao)) {
+    $selecao = array();
+    $selecao['id'] = 0;
+    $selecao['nome'] = "";
+    $selecao['titulos'] = "";
+    $selecao['posicao'] = "";
+    $selecao['participacao'] = "";
+    $selecao['id_tecnico'] = "";
+  }
+
+  $selecoes = getAll_S();
+  $tecnicos = getAll_T();
+
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -41,8 +60,16 @@
             <input type="number" name="copas"  placeholder="Quantidade de Copas" required>
             <input type="number" name="participacao" placeholder="Participação em Copas" required>
             <input type="number" name="rank"  placeholder="Posição no Ranking FIFA" required>
-            <input type="number" name="id_tecnico" placeholder="Id do Tecnico" required>
-          
+            <select class="form-select" name="id_tecnico">
+          <?php
+            foreach ($tecnicos as $tecnico) {
+              $selected =
+                $tecnico['id'] == $selecao['id_tecnico'] ?
+                'selected': '';
+              echo "<option $selected value='{$tecnico['id']}'>{$tecnico['nome']}</option>";
+            }
+           ?>
+        </select>
             <input type="submit" name="acao" value="Enviar">
         </form>
     </main>
