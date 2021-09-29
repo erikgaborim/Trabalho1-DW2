@@ -78,7 +78,7 @@
                                 </div>
 
                                 <div class='text'>
-                                    <p class='atributo'>Racking FIFA</p> 
+                                    <p class='atributo'>Ranking FIFA</p> 
                                     <p class='valor'>{$selecao['posicao']}º</p>
                                 </div>
 

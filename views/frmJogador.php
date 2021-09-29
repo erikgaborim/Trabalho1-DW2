@@ -52,8 +52,8 @@
             </div>
             <div id="div-header-options">
                 <li><a href="../index.php"><h3>Home</h3></a></li>
-                <li><a href="jogadores.php"><h3>Jogadores</h3></a></li>
-                <li><a href="selecao.php"><h3>Seleções</h3></a></li>
+                <li><a href="../views/jogadores.php"><h3>Jogadores</h3></a></li>
+                <li><a href="../views/selecao.php"><h3>Seleções</h3></a></li>
                 <li><img src="../images/logo-copa.svg" alt="simbolo_copa_catar"></li>
             </div>
         </ul>
