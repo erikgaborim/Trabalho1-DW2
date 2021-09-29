@@ -5,7 +5,8 @@
   error_reporting(E_ALL);
 
   $id = $_GET['id'];
+  var_dump($id);
   $selecao = getById_S($id);
-  require_once "frmSelecao.php";
+  require_once "../views/frmSelecao.php";
 
  ?>

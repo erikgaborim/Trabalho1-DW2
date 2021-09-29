@@ -13,8 +13,8 @@
     $jogador['altura'] = "";
     $jogador['peso'] = "";
     $jogador['posicao'] = "";
-    $jogador['id_clube']= "";
-    $jogador['id_selecao']= "";
+    $jogador['id_clube']= null;
+    $jogador['id_selecao']= null;
     $jogador['data_nascimento'] = "";
   }
 
@@ -60,8 +60,10 @@
     </header>
 
     <main> 
-        <form action="../function/gravarJogador.php" method="post">
+        <form action="../function/gravarJogador.php?" method="post">
             <h3>Inserir Jogador</h3>
+            <input readonly type="text" class="form-control" id="id" name="id" value='<?php echo "{$jogador['id']}"; ?>'>
+
             <input type="text" name="nome" placeholder="Nome Completo" value = '<?php echo "{$jogador['nome']}"
             ?>'required>
             <input type="text" name="apelido" placeholder="Apelido" value = '<?php echo "{$jogador['apelido']}"
@@ -72,7 +74,7 @@
             ?>' required>
             <input type="text" name="posicao"  placeholder="Posição (Ex: ATA)" value = '<?php echo "{$jogador['posicao']}"
             ?>' required>
-            <input type="date" name="data"  placeholder="Data de Nascimento" value = '<?php echo "{$jogador['data_nascimento']}"
+            <input type="date" name="data_nascimento"  placeholder="Data de Nascimento" value = '<?php echo "{$jogador['data_nascimento']}"
             ?>' required>
             <select class="form-select" name="id_clube">
             <?php

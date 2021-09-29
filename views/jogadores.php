@@ -36,7 +36,7 @@
             </div>
             <div id="div-header-options">
                 <li><a href="../index.php"><h3>Home</h3></a></li>
-                <li><a href="./jogadores.php"><h3>Jogadores</h3></a></li>
+                <li><a href="../views/jogadores.php"><h3>Jogadores</h3></a></li>
                 <li><a href="../views/selecao.php"><h3>Seleções</h3></a></li>
                 <li><img src="../images/logo-copa.svg" alt="simbolo_copa_catar"></li>
             </div>
@@ -51,6 +51,8 @@
                     $data_nascimento = new \DateTime($jogador['data_nascimento']);
                     $dateNow = new \DateTime(date('Y-m-d'));
                     $dateDiff = $data_nascimento->diff($dateNow);
+
+                    // var_dump($data_nascimento);
 
 
                     foreach ($clubes as $clube){
@@ -76,6 +78,11 @@
                             <p class='valor'>{$jogador['posicao']}</p>
                         </div>
                         
+                        <div class='text'>
+                            <p class='atributo'>ID:</p>
+                            <p class='valor'>{$jogador['id']}</p>
+                        </div>
+
                         <div class='text'>
                             <p class='atributo'>Seleção:</p>
                             <p class='valor'>$selecao_nome</p>
@@ -103,8 +110,8 @@
 
                     </div>
                     <div class='div-buttons'>
-                        <a href='#'><button class='crud-buttons update-button'>Alterar</button></a>
-                        <a href='#'><button class='crud-buttons delete-button'>Excluir</button></a>
+                        <a href='../function/editarJogador.php?id={$jogador['id']}'><button class='crud-buttons update-button'>Alterar</button></a>
+                        <a href='../function/removerJogador.php?id={$jogador['id']}'><button class='crud-buttons delete-button'>Excluir</button></a>
                     </div>
                 </div>
                     ";
@@ -155,7 +162,7 @@
         </section>
         <div class="div">
 
-        <a href="./frmjogador.php"><button class="crud-buttons create-button">Criar</button></a>
+        <a href="./frmJogador.php"><button class="crud-buttons create-button">Criar</button></a>
         </div>
     </main>
 

@@ -6,5 +6,5 @@
 
   $id = $_GET['id'];
   remove_J($id);
-  header('location:listagemJogador.php');
+  header('location:../views/jogadores.php');
  ?>

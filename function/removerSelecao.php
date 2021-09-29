@@ -6,5 +6,5 @@
 
   $id = $_GET['id'];
   remove_S($id);
-  header('location:listagemSelecao.php');
+  header('location:../views/selecao.php');
  ?>

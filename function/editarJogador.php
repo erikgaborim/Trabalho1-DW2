@@ -5,7 +5,8 @@
   error_reporting(E_ALL);
 
   $id = $_GET['id'];
+  // var_dump($id);
   $jogador = getById_J($id);
-  require_once "frmJogador.php";
+  require_once "../views/frmJogador.php";
 
  ?>

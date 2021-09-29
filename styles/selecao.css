@@ -64,6 +64,7 @@ section{
 .valor{
     display: flex;
     margin-left: auto;
+    /* color: ; */
 }
 
 .card  .content {
@@ -77,7 +78,7 @@ section{
 
 
 .card p{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .butao{
@@ -94,8 +95,12 @@ body{
     width: 100%;
     /* align-items: center; */
     justify-content:center;
+    color: white;
 }
-
+/* 
+.area .create-button{
+    white: white !important;
+} */
 .rodape{
     background-color:red;
 }

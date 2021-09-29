@@ -83,8 +83,8 @@
                                 </div>
 
                                 <div class='div-buttons'>
-                                    <a href='#'><button class='crud-buttons update-button'>Alterar</button></a>
-                                    <a href='#'><button class='crud-buttons delete-button'>Excluir</button></a>
+                                    <a href='../function/editarSelecao.php?id={$selecao['id']}'><button class='crud-buttons update-button'>Alterar</button></a>
+                                    <a href='../function/removerSelecao.php?id={$selecao['id']}'><button class='crud-buttons delete-button'>Excluir</button></a>
                                 </div>
 
                             </div>
@@ -206,7 +206,7 @@
         </section>
 
         <div class="area">
-            <a href="./frmselecao.php"><button class="crud-buttons create-button">Criar</button></a>
+            <a href="./frmSelecao.php"><button class="crud-buttons create-button">Criar</button></a>
         </div>
     </main>
 

@@ -46,21 +46,22 @@
             </div>
             <div id="div-header-options">
                 <li><a href="../index.php"><h3>Home</h3></a></li>
-                <li><a href="jogadores.php"><h3>Jogadores</h3></a></li>
-                <li><a href="selecao.php"><h3>Seleções</h3></a></li>
+                <li><a href="../views/jogadores.php"><h3>Jogadores</h3></a></li>
+                <li><a href="../views/selecao.php"><h3>Seleções</h3></a></li>
                 <li><img src="../images/logo-copa.svg" alt="simbolo_copa_catar"></li>
             </div>
         </ul>
     </header>
 
     <main> 
-        <form action="php/insert.php" method="post">
+        <form action="../function/gravarSelecao.php" method="post">
             <h3>Inserir Seleção</h3>
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="number" name="copas"  placeholder="Quantidade de Copas" required>
-            <input type="number" name="participacao" placeholder="Participação em Copas" required>
-            <input type="number" name="rank"  placeholder="Posição no Ranking FIFA" required>
-            <select class="form-select" name="id_tecnico">
+            <input readonly type="text" class="form-control" id="id" name="id" value='<?php echo "{$selecao['id']}"; ?>'>
+            <input type="text" name="nome" placeholder="Nome" value='<?php echo "{$selecao['nome']}"; ?>' required>
+            <input type="number" name="copas"  placeholder="Quantidade de Copas" value='<?php echo "{$selecao['titulos']}"; ?>'required>
+            <input type="number" name="participacao" placeholder="Participação em Copas" value='<?php echo "{$selecao['participacao']}"; ?>'required>
+            <input type="number" name="rank"  placeholder="Posição no Ranking FIFA" value='<?php echo "{$selecao['posicao']}"; ?>' required>
+            <select class="form-select" name="id_tecnico" value='<?php echo "{$selecao['id_tecnico']}"; ?>'>
           <?php
             foreach ($tecnicos as $tecnico) {
               $selected =
